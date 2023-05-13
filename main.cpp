@@ -44,6 +44,8 @@ int main()
             getch();
             main();
     }
+    getch();
+    main();
     return 0;
 }
 
@@ -130,19 +132,14 @@ bool check_digits(string x)
 
 bool check_numbers(string x)
 {
-    bool check = true;
-
     for(int i=0; i < x.length(); i++)
     {
         if(!(int(x[i]) >= 48 && int(x[i]) <= 57))
         {
-            check = false;
+            return false;
             break;
         }
     }
 
-    if(check == true)
     return true;
-    if(check == false)
-    return false;
 }
